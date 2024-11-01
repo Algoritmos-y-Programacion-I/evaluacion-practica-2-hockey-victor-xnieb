@@ -1,10 +1,10 @@
 package model;
 
-public  Persona {
+public abstract class Persona {
      String nombre;
      int edad;
 
-    public Persona(String nombre, int edad) {
+    Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }

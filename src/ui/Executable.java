@@ -17,7 +17,7 @@ public class Executable {
      * @post Se crea una instancia de Executable y se inicializan el lector de
      *       entrada y el controlador.
      */
-    public Executable() {
+    Executable() {
         escaner = new Scanner(System.in);
         controladora = new Controller();
     }
@@ -47,13 +47,13 @@ public class Executable {
 
 			switch (option) {
 					case 1:
-
+                        crearFixture();
 						break;
 					case 2:
-
+                        precargarInformacion();
 						break;
 					case 3:
-
+                        realizarPartido();
 						break;
 					case 4:
 						flag = true;
@@ -67,6 +67,27 @@ public class Executable {
 		}
 
     }
+
+
+
+
+    public void crearFixture(){
+        System.out.println(controladora.fixture());
+    }
+
+    public void precargarInformacion(){
+        controladora.precargarInformacion();
+    }
+
+    public void realizarPartido(){
+        System.out.println(controladora.simularPartido());
+    }
+    
+
+
+
+
+
 
     /**
      * Método principal (main) para iniciar la ejecución del programa.
